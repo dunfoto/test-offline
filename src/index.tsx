@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import data from './dataQuestion5.json';
 
+const dataQ5 = data.map(item => { return { ...item, edit: false } })
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App question5={dataQ5} />
   </React.StrictMode>,
   document.getElementById('root')
 );
